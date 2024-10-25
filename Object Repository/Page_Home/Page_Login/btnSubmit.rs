@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btnForgetPassword</name>
+   <name>btnSubmit</name>
    <tag></tag>
-   <elementGuidId>8768ae90-cc56-4736-8e39-47f8f73ce911</elementGuidId>
+   <elementGuidId>61c9b276-df4b-4748-91df-75d2e0da7851</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[@href=&quot;/forgotpassword&quot;]</value>
+         <value>//button[@type=&quot;submit&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

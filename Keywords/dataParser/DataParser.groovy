@@ -24,19 +24,23 @@ import techScore.BaseClass
 public class DataParser extends BaseClass{
 	TestData candidateData = findTestData(CANDIDATEDATA)
 	TestData roleData = findTestData(ROLESDATA)
-	def getTestData (TestData data,String refColumn,String refKey) {
-		List<String> columns = data.getColumnNames()
-		Map<String,String> dataMap = new HashMap<String,String>()
-		for(int rowNo=1; rowNo<=data.getRowNumbers(); rowNo++) {
-			if(data.getValue(refColumn,rowNo).equalsIgnoreCase(refKey)) {
-				for(String column : columns) {
-					dataMap.put(column, data.getValue(column,rowNo))
-				}
-				break
-			}
-		}
-		return dataMap
-	}
+	public Map<String,String> getTestData(TestData data, String refColumn, String refKey) {
+    List<String> columns = data.getColumnNames();
+    Map<String,String> dataMap = new HashMap<String,String>();
+    
+    for (int rowNo = 1; rowNo <= data.getRowNumbers(); rowNo++) {
+        // If the refColumn value matches the refKey
+        if (data.getValue(refColumn, rowNo).equalsIgnoreCase(refKey)) {
+            // Iterate over all columns and populate the dataMap
+            for (String column : columns) {
+                dataMap.put(column, data.getValue(column, rowNo));
+            }
+            break;  // Exit the loop after finding the matching row
+        }
+    }
+    
+    return dataMap;
+}
 
 	def candidateData(String candidateName) {
 		return getTestData(candidateData,'Name',candidateName)

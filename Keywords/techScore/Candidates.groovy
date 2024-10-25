@@ -36,14 +36,14 @@ public class Candidates extends BaseClass{
 		WebUI.sendKeys(locate.inputLinkedProfile(), candidateData.get('LinkedProfile'))
 		WebUI.sendKeys(locate.inputLastName(), candidateData.get('LastName'))
 		WebUI.sendKeys(locate.inputPhoneNumber(), candidateData.get('PhoneNumber'))
-		WebUI.sendKeys(locate.inputEmail(), candidateData.get('EmailAddress'))
-		WebUI.sendKeys(locate.inputJobTitle(), candidateData.get('JobTitle'))
+		//		WebUI.sendKeys(locate.inputEmail(), candidateData.get('EmailAddress'))
+		//		WebUI.sendKeys(locate.inputJobTitle(), candidateData.get('JobTitle'))
 		WebUI.click(locate.drpDegree())
 		dropdown(locate.listDegree(), candidateData.get('Degree'))
 		WebUI.sendKeys(locate.inputYears(), candidateData.get('Experience'))
 		WebUI.sendKeys(locate.inputLocation(), candidateData.get('Location'))
 		if(candidateData.get('InternalNotes') != empty) {
-			WebUI.sendKeys(locate.inputInternalNotes(), candidateData.get('InternalNotes'))
+			//			WebUI.sendKeys(locate.inputInternalNotes(), candidateData.get('InternalNotes'))
 		}else {
 			KeywordUtil.logInfo('There is no internal Notes provided')
 		}
